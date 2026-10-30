@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apos Academy — Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page">
+  <!-- Video background (YouTube HD clean embed) -->
+  <div class="video-background">
+    <iframe src="https://www.youtube-nocookie.com/embed/B6ZrAaGpsNI?autoplay=1&mute=1&loop=1&playlist=B6ZrAaGpsNI&controls=0&showinfo=0&autohide=1&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&vq=hd1080&hd=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="video-overlay"></div>
+  </div>
+  <div class="bg-overlay"></div>
+
+  <div class="login-card glass">
+    <div class="brand">
+      <img src="https://i.imgur.com/9fdFZdj.png" class="avatar" alt="Apos Academy" onerror="this.style.display='none'" />
+      <h1>Apos Academy</h1>
+    </div>
+    <form id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter username" required autocomplete="username" />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" required autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+      <div id="error" class="error hidden"></div>
+    </form>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

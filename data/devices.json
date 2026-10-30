@@ -1,0 +1,32 @@
+{
+  "1E621C42349E5C9A5DBD997868132E874FD55B6B28AAB751D43F90C3ED4D24D4": {
+    "hwid": "1E621C42349E5C9A5DBD997868132E874FD55B6B28AAB751D43F90C3ED4D24D4",
+    "status": "active",
+    "cpu": "Ryzen 7 5700X 8-Core Processor",
+    "gpu": "AMD Radeon RX 580 2048SP",
+    "ram": "16 GB",
+    "os": "Microsoft Windows 10 Pro 10.0.19045 (x64)",
+    "osInstallDate": "2026-09-27 12:20:52",
+    "discordId": "1256991161357439127",
+    "discordUsername": "@z.y40",
+    "discordAvatar": null,
+    "last_seen": "2026-10-30T11:44:56.811Z",
+    "created_at": "2026-10-27T19:07:14.270Z",
+    "updated_at": "2026-10-30T11:44:56.811Z",
+    "activated_at": "2026-10-30T11:19:01.719Z",
+    "sessions": [
+      {
+        "openTime": "2026-10-27T19:07:14.274Z",
+        "closeTime": "2026-10-28T02:08:46.150Z"
+      },
+      {
+        "openTime": "2026-10-28T19:01:48.323Z",
+        "closeTime": "2026-10-28T19:02:13.298Z"
+      },
+      {
+        "openTime": "2026-10-30T11:04:51.489Z",
+        "closeTime": null
+      }
+    ]
+  }
+}

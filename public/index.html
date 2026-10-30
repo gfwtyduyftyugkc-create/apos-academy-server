@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apos Academy — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page">
+  <!-- Video background (YouTube HD clean embed) -->
+  <div class="video-background">
+    <iframe src="https://www.youtube-nocookie.com/embed/B6ZrAaGpsNI?autoplay=1&mute=1&loop=1&playlist=B6ZrAaGpsNI&controls=0&showinfo=0&autohide=1&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0&vq=hd1080&hd=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="video-overlay"></div>
+  </div>
+  <div class="bg-overlay"></div>
+
+  <header class="glass-header">
+    <div class="brand-inline">
+      <img src="https://i.imgur.com/9fdFZdj.png" class="logo-img" alt="Apos Academy" onerror="this.style.display='none'" />
+      <h1>Apos Academy</h1>
+    </div>
+    <nav>
+      <span id="user-label"></span>
+      <button id="logout-btn" class="btn btn-ghost">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card glass">
+      <h2>Add Device Manually</h2>
+      <div class="row">
+        <input id="new-hwid" type="text" placeholder="Enter HWID code" />
+        <input id="new-discord" type="text" placeholder="Discord User ID (required)" required />
+        <button id="add-btn" class="btn btn-primary">Add</button>
+      </div>
+    </section>
+
+    <section class="card glass" style="display:flex;justify-content:space-between;align-items:center;">
+      <h2 style="margin:0;">Device Activation</h2>
+      <button id="open-activate-modal" class="btn btn-success">Activate Device</button>
+    </section>
+
+    <section class="card glass">
+      <div class="section-head">
+        <h2>Registered Devices (<span id="count">0</span>)</h2>
+        <span id="conn-status" class="conn">●</span>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="active">Active Devices</button>
+        <button class="tab" data-tab="inactive">Inactive / Pending</button>
+      </div>
+      <div class="search-row">
+        <input id="search-input" type="text" placeholder="Search by username or Discord ID..." />
+      </div>
+      <div id="devices" class="devices"></div>
+    </section>
+  </main>
+
+  <!-- Activation Modal -->
+  <div id="activation-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card glass">
+      <div class="modal-head">
+        <h3>Activate Device</h3>
+        <button id="activation-close" class="btn btn-ghost">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <label for="act-hwid">Device Code (HWID)</label>
+          <input id="act-hwid" type="text" placeholder="Enter HWID code" />
+        </div>
+        <div class="field">
+          <label for="act-discord">Discord (Username ID)</label>
+          <input id="act-discord" type="text" placeholder="e.g. Valori 123456789" />
+        </div>
+        <div id="activation-error" class="error hidden"></div>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end;">
+          <button id="activation-cancel" class="btn btn-ghost">Cancel</button>
+          <button id="activation-submit" class="btn btn-primary">Activate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Archive Modal -->
+  <div id="archive-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card glass">
+      <div class="modal-head">
+        <h3>Activity Archive (Last 3 Days)</h3>
+        <button id="modal-close" class="btn btn-ghost">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
